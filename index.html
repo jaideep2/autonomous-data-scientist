@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+    <head>
+        <!-- Recommended meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!-- PyScript CSS -->
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+
+        <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+        <style>
+            #loading {{ outline: none; border: none; background: transparent }}
+        </style>
+        <script type="module">
+            const loading = document.getElementById('loading');
+            addEventListener('py:ready', () => loading.close());
+            loading.showModal();
+        </script>
+        
+        <title>Matplotlib</title>
+        
+    </head>
+
+    <body>
+        <dialog id="loading">
+            <h1>Running...</h1>
+        </dialog>
+        
+        <div id="mpl"></div>
+        
+        <py-script terminal>{code}</py-script>
+    </body>
+</html>

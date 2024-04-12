@@ -1,4 +1,5 @@
 streamlit==1.31.0
+streamlit-ace==0.1.1
 streamlit_code_editor==0.1.12
 codeboxapi[all]==0.1.19
 crewai==0.1.32
